@@ -385,7 +385,7 @@ def prompt_for_update(freshen, update_auto):
             )
 
     if not freshen:
-        return
+        return False
 
     prompt = "Do you want to update all data sources?"
 
@@ -1383,7 +1383,7 @@ def update_readme_data(readme_file, **readme_updates):
 
 
 def move_hosts_file_into_place(final_file):
-    """
+    r"""
     Move the newly-created hosts file into its correct location on the OS.
 
     For UNIX systems, the hosts file is "etc/hosts." On Windows, it's
